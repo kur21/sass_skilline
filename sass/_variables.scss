@@ -1,0 +1,24 @@
+$primary-color: #2F327D;
+$secondary-color: #F48C06;
+$third-color: #65DAFF;
+$gray: #696984;
+$gray-light: #6C6C6C;
+$gray-dark: #464646;
+$gray-darker: #252641;
+$purple: #5B72EE;
+$yellow: #FFF2E1;
+$blue: #29B9E7;
+$orange:#F4B767;
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Nunito Sans', sans-serif;
+$wrapper: 1920px;
+:root {
+  --section-spacing: 160px;
+  @media screen and (max-width: 1023.98px) {
+    --section-spacing: 80px;
+  }
+  @media screen and (max-width: 767.98px) {
+    --section-spacing: 50px;
+  }
+  
+}

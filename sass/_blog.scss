@@ -1,0 +1,131 @@
+.blog {
+  margin-bottom: var(--section-spacing);
+  &-container {
+    max-width: 1590px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-header {
+    text-align: center;
+    font-family: $font-secondary;
+    margin-bottom: 100px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 50px 120px;
+  }
+  &-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+  &-tag {
+    background-color: $orange;
+    font-size: 18px;
+    line-height: calc(27/18);
+    letter-spacing: 0.02em;
+    color: $gray-darker;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100rem;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 180%;
+    color: $gray-darker;
+    margin-bottom: 20px;
+  }
+  &-desc,
+  &-more {
+    font-size: 20px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+  }
+  &-desc {
+    margin-bottom: 28px;
+  }
+  &-more {
+    display: none;
+    text-decoration: underline;
+    color: inherit;
+  }
+  &-item:first-child {
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
+    gap: 100px 0;
+    .blog-image {
+      height: 340px;
+    }
+    .blog-title {
+      font-size: 26px;
+    }
+    .blog-more {
+      display: inline-block;
+    }
+    .blog-tag {
+      position: absolute;
+      left: 0;
+      right: unset;
+      bottom: -70px;
+      padding: 4px 36px;
+    }
+  }
+  &-item:not(:first-child) {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    .blog-image {
+      max-width: 280px;
+    }
+  }
+  @media screen and (max-width: 1279.98px) {
+    &-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-header {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-list {
+      grid-template-rows: unset;
+      grid-gap: 30px;
+    }
+    &-title {
+      font-size: 20px;
+    }
+    &-item:first-of-type {
+      .blog-title {
+        font-size: 22px;
+      }
+    }
+    &-item:not(:first-child) {
+      flex-direction: column;
+      gap: 20px;
+      .blog-image {
+        max-width: 100%;
+      }
+    }
+    &-desc,
+    &-more {
+      font-size: 16px;
+    }
+  }
+  
+}

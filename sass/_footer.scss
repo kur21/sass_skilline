@@ -1,0 +1,122 @@
+.footer {
+  background-color: $gray-darker;
+  &-container {
+    max-width: 630px;
+    padding: 74px 15px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #B2B3CF;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 95px;
+  }
+  &-heading {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0.04em;
+    color: white;
+    padding-left: 41px;
+    margin-left: 41px;
+    border-left: 1px solid #626381;
+  }
+  &-subscribe {
+    margin-bottom: 96px;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+  }
+  &-form {
+    display: flex;
+    gap: 20px;
+  }
+  &-input {
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 1.5;
+    border: 1px solid #83839A;
+    padding: 15px 30px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 100rem;
+    color: white;
+    flex: 1;
+    &::placeholder {
+      color: #83839A;
+    }
+  }
+  &-btn {
+    color: white;
+    background: linear-gradient(105.5deg, #545AE7 19.57%, #393FCF 78.85%);
+    box-shadow: 0 10px 40px -10px rgba(#545AE8, 0.5);
+  }
+  &-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &-link {
+    padding: 0 20px;
+    color: inherit;
+    position: relative;
+    &:not(:first-child):before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 17px;
+      background-color: #626381;
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-header {
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-container {
+      padding-top: 80px;
+    }
+    &-heading {
+      font-size: 16px;
+      padding-left: 25px;
+      margin-left: 25px;
+    }
+    &-title {
+      font-size: 16px;
+    }
+    &-subscribe {
+      margin-bottom: 80px;
+    }
+    &-form {
+      flex-direction: column;
+    }
+    &-input {
+      font-size: 16px;
+    }
+    &-btn {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &-link {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    &-copyright {
+      font-size: 16px;
+    }
+  }
+  
+}

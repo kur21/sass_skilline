@@ -1,0 +1,166 @@
+.feature {
+  margin-bottom: var(--section-spacing);
+  &-container {
+    padding: 0 15px;
+    max-width: 1610px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-spacing) 0;
+  }
+  &-header {
+    max-width: 888px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-heading {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  &-text {
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 0 42px;
+  }
+  &-icon {
+    background: #FBFBFB;
+    box-shadow: 0px 15px 44px rgba(13, 15, 28, 0.12);
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &-section {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  // Section user interface
+  &-section:first-of-type {
+    .feature-content {
+      max-width: 542px;
+    }
+    .feature-heading {
+      margin-bottom: 50px;
+    }
+  }
+  // Section tools
+  &-section:nth-of-type(2) {
+    max-width: 1442px;
+    .feature-heading {
+      max-width: 393px;
+    }
+    .feature-text {
+      max-width: 568px;
+    }
+  }
+  // Section quizzes
+  &-section:nth-of-type(3) {
+    max-width: 1460px;
+    .feature-heading {
+      max-width: 347px;
+    }
+    .feature-text {
+      max-width: 596px;
+    }
+  }
+  // Section Class Management 
+  &-section:nth-of-type(4) {
+    max-width: 1545px;
+    .feature-heading {
+      max-width: 420px;
+    }
+    .feature-text {
+      max-width: 645px;
+    }
+  }
+  // Section Discussions
+  &-section:last-of-type {
+    max-width: 1486px;
+    margin-bottom: 150px;
+    .feature-heading {
+      max-width: 274px;
+    }
+    .feature-text {
+      max-width: 540px;
+    }
+  }
+  &-more {
+    font-family: $font-secondary;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: $secondary-color;
+    padding: 19px 38px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media screen and (max-width: 1279.98px) {
+    &-heading {
+      font-size: 30px;
+    }
+    &-section:first-of-type {
+      .feature-heading {
+        margin-bottom: 30px;
+      }
+      .feature-list {
+        gap: 20px;
+      }
+    }
+    &-section:last-of-type {
+      margin-bottom: 80px;
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-heading {
+      font-size: 24px;
+    }
+    &-item {
+      gap: 12px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-section:nth-of-type(odd) {
+      flex-direction: column;
+    }
+    &-section:nth-of-type(even) {
+      flex-direction: column-reverse;
+    }
+    &-section:nth-of-type(1),
+    &-section:nth-of-type(2),
+    &-section:nth-of-type(3),
+    &-section:nth-of-type(4),
+    &-section:nth-of-type(5) {
+      .feature-heading,
+      .feature-text {
+        max-width: 100%;
+      }
+    }
+    &-more {
+      font-size: 18px;
+      padding: 10px 30px;
+    }
+    &-section:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+}

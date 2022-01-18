@@ -1,0 +1,114 @@
+.youcan {
+  margin-bottom: var(--section-spacing);
+  &-container {
+    max-width: 1530px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-main {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 100px;
+    & > * {
+      width: 50%;
+    }
+  }
+  &-content {
+    position: relative;
+  }
+  &-heading {
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  &-desc {
+    margin-bottom: 30px;
+    letter-spacing: 0.02em;
+  }
+  &-more {
+    text-decoration: underline;
+    color: inherit;
+    line-height: 1.8;
+  }
+  &-image {
+    border-radius: 20px;
+    position: relative;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+  &-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 100rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      padding-left: 8px;
+    }
+  }
+  .square {
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+    &-1 {
+      width: 231px;
+      height: 231px;
+      right: -20px;
+      bottom: -20px;
+    }
+    &-2 {
+      width: 138px;
+      height: 138px;
+      top: -20px;
+      left: -20px;
+    }
+  }
+  .circle {
+    border-radius: 100rem;
+    position: absolute;
+    z-index: -1;
+    &-1 {
+      width: 73px;
+      height: 73px;
+      top: -13px;
+      left: -25px;
+    }
+    &-2 {
+      width: 30px;
+      height: 30px;
+      right: -13px;
+      top: 55%;
+    }
+  }
+  @media screen and (max-width: 1279.98px) {
+    &-main {
+      gap: 60px;
+    }
+  }
+  @media screen and (max-width: 1023.98px) {
+    &-main {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    .square {
+      display: none;
+    }
+  }
+}
